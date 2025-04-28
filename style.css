@@ -47,7 +47,9 @@ header { background:#b30000; }
 }
 .hero-content h2 {
   font-family:'Noto Sans SC',sans-serif;
-  font-size:3em; margin-bottom:.3em;
+  font-size:3em;
+  margin-bottom:.3em;
+  color: #ffffff; 
 }
 .btn {
   background:#ffd700; color:#b30000;
