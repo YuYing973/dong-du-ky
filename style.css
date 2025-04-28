@@ -1,19 +1,101 @@
-
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  line-height: 1.6;
 }
-header, footer {
-    background: #b30000;
-    color: white;
-    text-align: center;
-    padding: 1em;
+
+/* Header */
+header {
+  background-color: #b30000;
+  padding: 1em 0;
 }
-.container {
-    padding: 20px;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: white;
+  font-size: 2em;
+}
+nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+nav .nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav .nav-list li a:hover {
+  color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4em 0;
+  /* If you prefer a distinct hero background, remove the next line */
+  background: url('images/preview1.jpg') center/cover no-repeat;
+  color: white;
+}
+.hero h2 {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.btn {
+  background-color: #ffd700;
+  color: #b30000;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 2em 0;
 }
 .gallery img {
-    width: 300px;
-    margin: 5px;
-    border-radius: 10px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Sections */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  color: #b30000;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #b30000;
+  color: white;
+  margin-top: 2em;
 }
