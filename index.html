@@ -1,80 +1,129 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đông Du Ký - Board Game Học Tiếng Trung</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Đông Du Ký - Board Game Học Tiếng Trung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Đông Du Ký 东游记</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Trang Chủ</a></li>
-                    <li><a href="#shop">Cửa Hàng</a></li>
-                    <li><a href="#rules">Luật Chơi</a></li>
-                    <li><a href="#collections">Khám Phá</a></li>
-                    <li><a href="#key">Đáp Án</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
-                    <li><a href="#cart">Giỏ Hàng 🛒</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Học Tiếng Trung Qua Trò Chơi!</h2>
-            <p>Khám phá ngôn ngữ và văn hóa Trung Hoa cùng Đông Du Ký!</p>
-            <a href="#shop" class="btn">Mua Ngay</a>
-        </div>
-    </section>
-
-    <section class="gallery container">
-        <img src="images/preview1.jpg" alt="Board overview of Đông Du Ký">
-        <img src="images/preview2.jpg" alt="Challenge and Opportunity cards Đông Du Ký">
-        <img src="images/preview3.jpg" alt="Player movement on board Đông Du Ký">
-    </section>
-
-    <section id="shop" class="container">
-        <h2>Cửa Hàng</h2>
-        <!-- Your product cards here -->
-    </section>
-
-    <section id="collections" class="container">
-        <h2>Khám Phá Trung Hoa</h2>
-        <div class="collections">
-            <div><h3>Địa Danh</h3><p>Vạn Lý Trường Thành, Cố Cung, Tây Hồ...</p></div>
-            <div><h3>Ẩm Thực</h3><p>Lẩu Tứ Xuyên, Bánh Bao, Vịt Quay Bắc Kinh...</p></div>
-            <div><h3>Nhân Vật</h3><p>Khổng Tử, Tôn Ngộ Không, Võ Tắc Thiên...</p></div>
-            <div><h3>Văn Học & Nghệ Thuật</h3><p>Lý Bạch, Đỗ Phủ, Tam Quốc Diễn Nghĩa...</p></div>
-        </div>
-    </section>
-
-    <section id="key" class="container">
-        <h2>Đáp Án</h2>
-        <ul>
-            <li><strong>Challenge:</strong> Thủ đô của Trung Quốc là gì? <br><strong>Answer:</strong> Bắc Kinh</li>
-            <li><strong>Challenge:</strong> Món ăn nổi tiếng "Peking Duck" đến từ thành phố nào? <br><strong>Answer:</strong> Bắc Kinh</li>
-            <li><strong>Challenge:</strong> Ai là tác giả của "Tam Quốc Diễn Nghĩa"? <br><strong>Answer:</strong> La Quán Trung</li>
-            <li><strong>Challenge:</strong> Biểu tượng linh thiêng trong văn hóa Trung Quốc là con vật nào? <br><strong>Answer:</strong> Rồng</li>
-            <li><strong>Challenge:</strong> Thành phố nào nổi tiếng với món Lẩu Tứ Xuyên? <br><strong>Answer:</strong> Thành Đô (Chengdu)</li>
-            <li><strong>Challenge:</strong> Ngọn núi nổi tiếng gắn với truyền thuyết Tiên nữ là gì? <br><strong>Answer:</strong> Ngũ Đài Sơn</li>
-            <li><strong>Challenge:</strong> Nhà thơ nổi tiếng với bài "Tĩnh Dạ Tư" là ai? <br><strong>Answer:</strong> Lý Bạch</li>
-            <li><strong>Challenge:</strong> Tên gọi khác của Tử Cấm Thành là gì? <br><strong>Answer:</strong> Cố Cung</li>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Đông Du Ký 东游记</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#home">Trang Chủ</a></li>
+          <li><a href="#shop">Cửa Hàng</a></li>
+          <li><a href="#rules">Luật Chơi</a></li>
+          <li><a href="#collections">Khám Phá</a></li>
+          <li><a href="#key">Đáp Án</a></li>
+          <li><a href="#contact">Liên Hệ</a></li>
+          <li><a href="#cart">Giỏ Hàng 🛒</a></li>
         </ul>
-        <p><a href="docs/dap-an-dongduky.pdf" download>📄 Tải xuống file Đáp Án đầy đủ (PDF)</a></p>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 Đông Du Ký. Bản quyền thuộc về Đệ Tam Tổ - Đại học Ngoại Thương.</p>
-    </footer>
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h2>Học Tiếng Trung Qua Trò Chơi!</h2>
+      <p>Khám phá ngôn ngữ và văn hóa Trung Hoa cùng Đông Du Ký!</p>
+      <a href="#shop" class="btn">Mua Ngay</a>
+    </div>
+  </section>
 
-    <script>
-        /* JavaScript section remains the same */
-    </script>
+  <section id="shop" class="container products">
+    <h2>Cửa Hàng</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="images/preview1.jpg" alt="Đông Du Ký - Bộ Tiêu Chuẩn">
+        <h3>Đông Du Ký – Bộ Tiêu Chuẩn</h3>
+        <p>Gồm 40 ô lục giác, thẻ Thử Thách, thẻ Cơ Hội, thẻ Chức Năng, xúc xắc, và nhiều hơn thế!</p>
+        <p class="price">150.000₫</p>
+        <button onclick="addToCart('Đông Du Ký – Bộ Tiêu Chuẩn',150000)">Thêm vào Giỏ</button>
+      </div>
+      <div class="product-card">
+        <img src="images/preview2.jpg" alt="Bộ Mở Rộng – Địa Danh">
+        <h3>Bộ Mở Rộng – Địa Danh</h3>
+        <p>10 thẻ Địa Danh nổi tiếng, mở rộng hành trình khám phá!</p>
+        <p class="price">50.000₫</p>
+        <button onclick="addToCart('Bộ Mở Rộng – Địa Danh',50000)">Thêm vào Giỏ</button>
+      </div>
+      <div class="product-card">
+        <img src="images/preview3.jpg" alt="Bộ Mở Rộng – Ẩm Thực">
+        <h3>Bộ Mở Rộng – Ẩm Thực</h3>
+        <p>10 thẻ về ẩm thực Trung Quốc nổi tiếng, thêm hương vị cho cuộc chơi!</p>
+        <p class="price">50.000₫</p>
+        <button onclick="addToCart('Bộ Mở Rộng – Ẩm Thực',50000)">Thêm vào Giỏ</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="collections" class="container">
+    <h2>Khám Phá Trung Hoa</h2>
+    <div class="collections-grid">
+      <div><h3>Địa Danh</h3><p>Vạn Lý Trường Thành, Cố Cung, Tây Hồ…</p></div>
+      <div><h3>Ẩm Thực</h3><p>Lẩu Tứ Xuyên, Bánh Bao, Vịt Quay Bắc Kinh…</p></div>
+      <div><h3>Nhân Vật</h3><p>Khổng Tử, Tôn Ngộ Không, Võ Tắc Thiên…</p></div>
+      <div><h3>Văn Học & Nghệ Thuật</h3><p>Lý Bạch, Đỗ Phủ, Tam Quốc Diễn Nghĩa…</p></div>
+    </div>
+  </section>
+
+  <section id="rules" class="container">
+    <h2>Luật Chơi</h2>
+    <p>Mục tiêu: Trở thành người chơi giàu nhất thông qua mua bán đất đai, trả lời thử thách và quản lý tài sản!</p>
+    <p>Chuẩn bị: Chọn quân cờ, nhận tiền vốn, chọn thẻ chức năng…</p>
+    <p><a href="docs/rules.pdf" download>📄 Tải Luật Chơi (PDF)</a></p>
+  </section>
+
+  <section id="key" class="container">
+    <h2>Đáp Án</h2>
+    <ul>
+      <li><strong>Challenge:</strong> Thủ đô của Trung Quốc là gì? <br><strong>Answer:</strong> Bắc Kinh</li>
+      <!-- …other keys… -->
+    </ul>
+    <p><a href="docs/dap-an-dongduky.pdf" download>📄 Tải Đáp Án (PDF)</a></p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Liên Hệ</h2>
+    <form onsubmit="alert('Cám ơn bạn đã gửi tin nhắn!'); return false;">
+      <input type="text" placeholder="Tên" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Tin nhắn" required></textarea>
+      <button type="submit">Gửi Tin Nhắn</button>
+    </form>
+  </section>
+
+  <section id="cart" class="container">
+    <h2>Giỏ Hàng</h2>
+    <div id="cartItems"><p>Chưa có sản phẩm trong giỏ.</p></div>
+    <h3 id="totalPrice"></h3>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Đông Du Ký. Bản quyền thuộc về Đệ Tam Tổ - Đại học Ngoại thương CSII tại TP.HCM</p>
+  </footer>
+
+  <script>
+    let cart = [];
+    function addToCart(name, price) {
+      const item = cart.find(i => i.name===name);
+      if (item) item.quantity++;
+      else cart.push({name,price,quantity:1});
+      updateCart();
+      alert(`Đã thêm ${name} vào giỏ!`);
+    }
+    function updateCart() {
+      const ci = document.getElementById('cartItems'),
+            tp = document.getElementById('totalPrice');
+      if(!cart.length){ ci.innerHTML='<p>Chưa có sản phẩm trong giỏ.</p>'; tp.innerText=''; return; }
+      ci.innerHTML = cart.map(i=>`<p>${i.name} x${i.quantity} = ${(i.price*i.quantity).toLocaleString('vi-VN')}₫</p>`).join('');
+      const total = cart.reduce((s,i)=>s+i.price*i.quantity,0);
+      tp.innerText = `Tổng cộng: ${total.toLocaleString('vi-VN')}₫`;
+    }
+  </script>
 </body>
 </html>
