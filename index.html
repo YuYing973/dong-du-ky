@@ -145,13 +145,14 @@
       tp.innerText = `Tổng cộng: ${total.toLocaleString('vi-VN')}₫`;
     }
     document.getElementById('checkoutBtn').addEventListener('click', () => {
-      if (!cart.length) {
-        alert('Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.');
-        return;
-      }
-      const summary = cart.map(i => `${i.name} x${i.quantity}`).join('\n');
-      alert(`Xác nhận đơn hàng:\n${summary}\n${document.getElementById('totalPrice').innerText}`);
-    });
+  if (!cart.length) {
+    alert('Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.');
+    return;
+  }
+  // Redirect to the checkout page
+  window.location.href = 'checkout.html';
+});
+
   </script>
 </body>
 </html>
