@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Thanh Toán — Đông Du Ký</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>…same nav as index…</header>
+  <section class="container">
+    <h2>Thông Tin Thanh Toán</h2>
+    <form onsubmit="alert('Cảm ơn đơn hàng của bạn!'); return false;">
+      <input class="input-field" type="text" placeholder="Họ và Tên" required>
+      <input class="input-field" type="tel" placeholder="Số điện thoại" required>
+      <input class="input-field" type="text" placeholder="Địa chỉ giao hàng" required>
+      <select class="input-field" required>
+        <option value="">Chọn Phương Thức Thanh Toán</option>
+        <option>Chuyển khoản ngân hàng</option>
+        <option>Thanh toán khi nhận hàng (COD)</option>
+        <option>Ví Momo/ZaloPay</option>
+      </select>
+      <button type="submit" class="btn">Xác Nhận Thanh Toán</button>
+    </form>
+  </section>
+  <footer>…same footer…</footer>
+</body>
+</html>
