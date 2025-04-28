@@ -37,30 +37,70 @@
   <section id="shop" class="container products">
     <h2>Cửa Hàng</h2>
     <div class="products-grid">
-      <!-- product cards as before -->
+      <div class="product-card">
+        <img src="images/preview1.jpg" alt="Đông Du Ký - Bộ Tiêu Chuẩn">
+        <h3>Đông Du Ký – Bộ Tiêu Chuẩn</h3>
+        <p>Gồm 40 ô lục giác, thẻ Thử Thách, thẻ Cơ Hội, thẻ Chức Năng, xúc xắc, và nhiều hơn thế!</p>
+        <p class="price">150.000₫</p>
+        <button onclick="addToCart('Đông Du Ký – Bộ Tiêu Chuẩn',150000)">Thêm vào Giỏ</button>
+      </div>
+      <div class="product-card">
+        <img src="images/preview2.jpg" alt="Bộ Mở Rộng – Địa Danh">
+        <h3>Bộ Mở Rộng – Địa Danh</h3>
+        <p>10 thẻ Địa Danh nổi tiếng, mở rộng hành trình khám phá!</p>
+        <p class="price">50.000₫</p>
+        <button onclick="addToCart('Bộ Mở Rộng – Địa Danh',50000)">Thêm vào Giỏ</button>
+      </div>
+      <div class="product-card">
+        <img src="images/preview3.jpg" alt="Bộ Mở Rộng – Ẩm Thực">
+        <h3>Bộ Mở Rộng – Ẩm Thực</h3>
+        <p>10 thẻ về ẩm thực Trung Quốc nổi tiếng, thêm hương vị cho cuộc chơi!</p>
+        <p class="price">50.000₫</p>
+        <button onclick="addToCart('Bộ Mở Rộng – Ẩm Thực',50000)">Thêm vào Giỏ</button>
+      </div>
     </div>
   </section>
 
   <section id="collections" class="container">
     <h2>Khám Phá Trung Hoa</h2>
     <div class="collections-grid">
-      <!-- collections cards -->
+      <div><h3>Địa Danh</h3><p>Vạn Lý Trường Thành, Cố Cung, Tây Hồ…</p></div>
+      <div><h3>Ẩm Thực</h3><p>Lẩu Tứ Xuyên, Bánh Bao, Vịt Quay Bắc Kinh…</p></div>
+      <div><h3>Nhân Vật</h3><p>Khổng Tử, Tôn Ngộ Không, Võ Tắc Thiên…</p></div>
+      <div><h3>Văn Học & Nghệ Thuật</h3><p>Lý Bạch, Đỗ Phủ, Tam Quốc Diễn Nghĩa…</p></div>
     </div>
   </section>
 
   <section id="rules" class="container">
     <h2>Luật Chơi</h2>
-    <!-- rules content -->
+    <p>Mục tiêu: Trở thành người chơi giàu nhất thông qua mua bán đất đai, trả lời thử thách và quản lý tài sản!</p>
+    <p>Chuẩn bị: Chọn quân cờ, nhận tiền vốn, chọn thẻ chức năng…</p>
+    <p><a href="docs/rules.pdf" download>📄 Tải Luật Chơi (PDF)</a></p>
   </section>
 
   <section id="key" class="container">
     <h2>Đáp Án</h2>
-    <!-- keys content -->
+    <ul>
+      <li><strong>Challenge:</strong> Thủ đô của Trung Quốc là gì? <br><strong>Answer:</strong> Bắc Kinh</li>
+      <li><strong>Challenge:</strong> Món ăn nổi tiếng "Peking Duck" đến từ thành phố nào? <br><strong>Answer:</strong> Bắc Kinh</li>
+      <li><strong>Challenge:</strong> Ai là tác giả của "Tam Quốc Diễn Nghĩa"? <br><strong>Answer:</strong> La Quán Trung</li>
+      <li><strong>Challenge:</strong> Biểu tượng linh thiêng trong văn hóa Trung Quốc là con vật nào? <br><strong>Answer:</strong> Rồng</li>
+      <li><strong>Challenge:</strong> Thành phố nào nổi tiếng với món Lẩu Tứ Xuyên? <br><strong>Answer:</strong> Thành Đô (Chengdu)</li>
+      <li><strong>Challenge:</strong> Ngọn núi nổi tiếng gắn với truyền thuyết Tiên nữ là gì? <br><strong>Answer:</strong> Ngũ Đài Sơn</li>
+      <li><strong>Challenge:</strong> Nhà thơ nổi tiếng với bài "Tĩnh Dạ Tư" là ai? <br><strong>Answer:</strong> Lý Bạch</li>
+      <li><strong>Challenge:</strong> Tên gọi khác của Tử Cấm Thành là gì? <br><strong>Answer:</strong> Cố Cung</li>
+    </ul>
+    <p><a href="docs/dap-an-dongduky.pdf" download>📄 Tải Đáp Án (PDF)</a></p>
   </section>
 
   <section id="contact" class="container">
     <h2>Liên Hệ</h2>
-    <!-- contact form -->
+    <form onsubmit="alert('Cám ơn bạn đã gửi tin nhắn!'); return false;">
+      <input type="text" placeholder="Tên" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Tin nhắn" required></textarea>
+      <button type="submit">Gửi Tin Nhắn</button>
+    </form>
   </section>
 
   <section id="cart" class="container">
@@ -99,9 +139,8 @@
         alert('Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.');
         return;
       }
-      // Placeholder checkout action
       const summary = cart.map(i => `${i.name} x${i.quantity}`).join('\n');
-      alert(`Xác nhận đơn hàng:\n${summary}\nTổng: ${document.getElementById('totalPrice').innerText}`);
+      alert(`Xác nhận đơn hàng:\n${summary}\n${document.getElementById('totalPrice').innerText}`);
     });
   </script>
 </body>
