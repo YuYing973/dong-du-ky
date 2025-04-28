@@ -1,0 +1,19 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header, footer {
+    background: #b30000;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+.container {
+    padding: 20px;
+}
+.gallery img {
+    width: 300px;
+    margin: 5px;
+    border-radius: 10px;
+}
