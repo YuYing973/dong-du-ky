@@ -130,6 +130,16 @@ form button {
   border-radius:5px; cursor:pointer;
 }
 form button:hover { background:#8c0000; }
+.input-field {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+}
 
 /* CART */
 #cartItems p { margin:.5em 0; }
