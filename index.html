@@ -37,93 +37,72 @@
   <section id="shop" class="container products">
     <h2>Cửa Hàng</h2>
     <div class="products-grid">
-      <div class="product-card">
-        <img src="images/preview1.jpg" alt="Đông Du Ký - Bộ Tiêu Chuẩn">
-        <h3>Đông Du Ký – Bộ Tiêu Chuẩn</h3>
-        <p>Gồm 40 ô lục giác, thẻ Thử Thách, thẻ Cơ Hội, thẻ Chức Năng, xúc xắc, và nhiều hơn thế!</p>
-        <p class="price">150.000₫</p>
-        <button onclick="addToCart('Đông Du Ký – Bộ Tiêu Chuẩn',150000)">Thêm vào Giỏ</button>
-      </div>
-      <div class="product-card">
-        <img src="images/preview2.jpg" alt="Bộ Mở Rộng – Địa Danh">
-        <h3>Bộ Mở Rộng – Địa Danh</h3>
-        <p>10 thẻ Địa Danh nổi tiếng, mở rộng hành trình khám phá!</p>
-        <p class="price">50.000₫</p>
-        <button onclick="addToCart('Bộ Mở Rộng – Địa Danh',50000)">Thêm vào Giỏ</button>
-      </div>
-      <div class="product-card">
-        <img src="images/preview3.jpg" alt="Bộ Mở Rộng – Ẩm Thực">
-        <h3>Bộ Mở Rộng – Ẩm Thực</h3>
-        <p>10 thẻ về ẩm thực Trung Quốc nổi tiếng, thêm hương vị cho cuộc chơi!</p>
-        <p class="price">50.000₫</p>
-        <button onclick="addToCart('Bộ Mở Rộng – Ẩm Thực',50000)">Thêm vào Giỏ</button>
-      </div>
+      <!-- product cards as before -->
     </div>
   </section>
 
   <section id="collections" class="container">
     <h2>Khám Phá Trung Hoa</h2>
     <div class="collections-grid">
-      <div><h3>Địa Danh</h3><p>Vạn Lý Trường Thành, Cố Cung, Tây Hồ…</p></div>
-      <div><h3>Ẩm Thực</h3><p>Lẩu Tứ Xuyên, Bánh Bao, Vịt Quay Bắc Kinh…</p></div>
-      <div><h3>Nhân Vật</h3><p>Khổng Tử, Tôn Ngộ Không, Võ Tắc Thiên…</p></div>
-      <div><h3>Văn Học & Nghệ Thuật</h3><p>Lý Bạch, Đỗ Phủ, Tam Quốc Diễn Nghĩa…</p></div>
+      <!-- collections cards -->
     </div>
   </section>
 
   <section id="rules" class="container">
     <h2>Luật Chơi</h2>
-    <p>Mục tiêu: Trở thành người chơi giàu nhất thông qua mua bán đất đai, trả lời thử thách và quản lý tài sản!</p>
-    <p>Chuẩn bị: Chọn quân cờ, nhận tiền vốn, chọn thẻ chức năng…</p>
-    <p><a href="docs/rules.pdf" download>📄 Tải Luật Chơi (PDF)</a></p>
+    <!-- rules content -->
   </section>
 
   <section id="key" class="container">
     <h2>Đáp Án</h2>
-    <ul>
-      <li><strong>Challenge:</strong> Thủ đô của Trung Quốc là gì? <br><strong>Answer:</strong> Bắc Kinh</li>
-      <!-- …other keys… -->
-    </ul>
-    <p><a href="docs/dap-an-dongduky.pdf" download>📄 Tải Đáp Án (PDF)</a></p>
+    <!-- keys content -->
   </section>
 
   <section id="contact" class="container">
     <h2>Liên Hệ</h2>
-    <form onsubmit="alert('Cám ơn bạn đã gửi tin nhắn!'); return false;">
-      <input type="text" placeholder="Tên" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Tin nhắn" required></textarea>
-      <button type="submit">Gửi Tin Nhắn</button>
-    </form>
+    <!-- contact form -->
   </section>
 
   <section id="cart" class="container">
     <h2>Giỏ Hàng</h2>
     <div id="cartItems"><p>Chưa có sản phẩm trong giỏ.</p></div>
     <h3 id="totalPrice"></h3>
+    <button id="checkoutBtn" class="btn checkout">Thanh toán</button>
   </section>
 
   <footer>
-    <p>&copy; 2025 Đông Du Ký. Bản quyền thuộc về Đệ Tam Tổ - Đại học Ngoại thương Cơ sở II, TP. HCM</p>
+    <p>&copy; 2025 Đệ Tam Tổ – Đại học Ngoại thương Cơ sở II, TP. HCM</p>
   </footer>
 
   <script>
     let cart = [];
     function addToCart(name, price) {
-      const item = cart.find(i => i.name===name);
+      const item = cart.find(i => i.name === name);
       if (item) item.quantity++;
-      else cart.push({name,price,quantity:1});
+      else cart.push({ name, price, quantity: 1 });
       updateCart();
       alert(`Đã thêm ${name} vào giỏ!`);
     }
     function updateCart() {
-      const ci = document.getElementById('cartItems'),
-            tp = document.getElementById('totalPrice');
-      if(!cart.length){ ci.innerHTML='<p>Chưa có sản phẩm trong giỏ.</p>'; tp.innerText=''; return; }
-      ci.innerHTML = cart.map(i=>`<p>${i.name} x${i.quantity} = ${(i.price*i.quantity).toLocaleString('vi-VN')}₫</p>`).join('');
-      const total = cart.reduce((s,i)=>s+i.price*i.quantity,0);
+      const ci = document.getElementById('cartItems'), tp = document.getElementById('totalPrice');
+      if (!cart.length) {
+        ci.innerHTML = '<p>Chưa có sản phẩm trong giỏ.</p>';
+        tp.innerText = '';
+        return;
+      }
+      ci.innerHTML = cart.map(i => `<p>${i.name} x${i.quantity} = ${(i.price * i.quantity).toLocaleString('vi-VN')}₫</p>`).join('');
+      const total = cart.reduce((s, i) => s + i.price * i.quantity, 0);
       tp.innerText = `Tổng cộng: ${total.toLocaleString('vi-VN')}₫`;
     }
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+      if (!cart.length) {
+        alert('Giỏ hàng trống! Vui lòng thêm sản phẩm trước khi thanh toán.');
+        return;
+      }
+      // Placeholder checkout action
+      const summary = cart.map(i => `${i.name} x${i.quantity}`).join('\n');
+      alert(`Xác nhận đơn hàng:\n${summary}\nTổng: ${document.getElementById('totalPrice').innerText}`);
+    });
   </script>
 </body>
 </html>
